@@ -5,15 +5,9 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * The @ExceptionHandler annotation allows us to handle specified types of exceptions through one single method.
- *
- * Source: https://www.baeldung.com/spring-boot-bean-validation#the-exceptionhandler-annotation
- */
 public class FieldExceptionHandler {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

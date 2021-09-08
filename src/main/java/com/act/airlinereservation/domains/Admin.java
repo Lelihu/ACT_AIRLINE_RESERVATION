@@ -1,22 +1,21 @@
 package com.act.airlinereservation.domains;
 
-        import lombok.AllArgsConstructor;
-        import lombok.Builder;
-        import lombok.Data;
-        import lombok.NoArgsConstructor;
-
-        import javax.persistence.*;
-        import javax.validation.constraints.NotBlank;
-        import javax.validation.constraints.NotNull;
-        import javax.validation.constraints.Size;
-        import java.time.LocalDate;
-        import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder // https://en.wikipedia.org/wiki/Builder_pattern
+@Builder
 public class Admin {
 
     @Id
@@ -45,6 +44,5 @@ public class Admin {
     @Column(nullable = false)
     private Integer Password;
 
-    // assign default value
     private Boolean isVerified = Boolean.TRUE;
 }

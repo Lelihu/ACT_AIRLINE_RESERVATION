@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -16,7 +15,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder // https://en.wikipedia.org/wiki/Builder_pattern
+@Builder
 public class Schedule {
 
     @Id
@@ -93,10 +92,8 @@ public class Schedule {
     @Column(nullable = false)
     private Integer NumSeat;
 
-    // assign default value
     private Boolean isVerified = Boolean.TRUE;
 
-    // assign default value
     private Double Price = 0.0;
 }
 

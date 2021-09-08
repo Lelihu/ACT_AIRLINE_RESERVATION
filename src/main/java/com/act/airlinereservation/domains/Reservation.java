@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -16,7 +15,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder // https://en.wikipedia.org/wiki/Builder_pattern
+@Builder
 public class Reservation {
 
     @Id
@@ -35,6 +34,5 @@ public class Reservation {
     @Column(nullable = false)
     private Integer SeatNo;
 
-    // assign default value
     private Boolean isVerified = Boolean.TRUE;
 }
