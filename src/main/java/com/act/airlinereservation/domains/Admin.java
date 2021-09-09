@@ -8,8 +8,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.util.Date;
+//import java.time.LocalDate;
+//import java.util.Date;
 
 @Entity
 @Data
@@ -40,7 +40,7 @@ public class Admin {
     @Column(nullable = false, unique = true)
     private String phoneNumber;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Password is mandatory.")
     @Column(nullable = false)
     private Integer Password;
 

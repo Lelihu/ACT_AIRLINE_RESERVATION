@@ -22,15 +22,15 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Schedule Id is Mandatory.")
     @Column(nullable = false)
     private Integer ScheduleId;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Customer Id is Mandatory.")
     @Column(nullable = false)
     private Integer CustomerId;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Seat No is Mandatory.")
     @Column(nullable = false)
     private Integer SeatNo;
 

@@ -21,6 +21,6 @@ public class PassengerController {
 
     @GetMapping("/api/passenger/list")
     public Iterable<Passenger> listPassengers() {
-        return passengerService.allPassenger();
+        return passengerService.allPassengers();
     }
 }

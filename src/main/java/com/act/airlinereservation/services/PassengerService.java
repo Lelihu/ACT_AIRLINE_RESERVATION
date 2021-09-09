@@ -19,7 +19,7 @@ public class PassengerService {
 
     }
 
-    public Iterable<Passenger> allPassenger() {
+    public Iterable<Passenger> allPassengers() {
         return passengerRepository.findAll();
     }
 }

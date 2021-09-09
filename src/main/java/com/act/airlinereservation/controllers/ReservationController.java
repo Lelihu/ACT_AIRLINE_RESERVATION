@@ -21,6 +21,6 @@ public class ReservationController {
 
     @GetMapping("/api/reservation/list")
     public Iterable<Reservation> listReservations() {
-        return reservationService.allReservation();
+        return reservationService.allReservations();
     }
 }

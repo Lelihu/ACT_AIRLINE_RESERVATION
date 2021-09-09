@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 @RestController
 public class AdminController {
@@ -21,6 +22,6 @@ public class AdminController {
 
     @GetMapping("/api/admin/list")
     public Iterable<Admin> listAdmins() {
-        return adminService.allAdmin();
+        return adminService.allAdmins();
     }
 }

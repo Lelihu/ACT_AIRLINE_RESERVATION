@@ -18,7 +18,7 @@ public class ScheduleService {
 
     }
 
-    public Iterable<Schedule> allSchedule() {
+    public Iterable<Schedule> allSchedules() {
         return scheduleRepository.findAll();
     }
 }

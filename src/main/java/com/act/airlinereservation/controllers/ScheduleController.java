@@ -21,6 +21,6 @@ public class ScheduleController {
 
     @GetMapping("/api/schedule/list")
     public Iterable<Schedule> listSchedules() {
-        return scheduleService.allSchedule();
+        return scheduleService.allSchedules();
     }
 }

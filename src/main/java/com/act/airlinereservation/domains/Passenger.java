@@ -50,7 +50,7 @@ import java.util.Date;
     @Column(nullable = false)
     private LocalDate dateOfBirth;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Password is mandatory.")
     @Column(nullable = false)
     private Integer Password;
 

@@ -22,73 +22,73 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "First name is mandatory.")
+    @NotBlank(message = "Airline is mandatory.")
     @Column(nullable = false)
     @Size(max = 15, min = 3)
     private String Airline;
 
-    @NotBlank(message = "Middle name is mandatory.")
+    @NotBlank(message = "Flight Name is mandatory.")
     @Column(nullable = false)
     @Size(max = 15)
     private String FlightName;
 
-    @NotBlank(message = "Last name is mandatory.")
+    @NotBlank(message = "Flight Number is mandatory.")
     @Column(nullable = false)
     @Size(max = 15)
     private String FlightNum;
 
-    @NotBlank(message = "Email is mandatory.")
+    @NotBlank(message = "Origin is mandatory.")
     @Column(nullable = false, unique = true)
     private String Origin;
 
-    @NotBlank(message = "Phone number is mandatory.")
+    @NotBlank(message = "OriginLat is mandatory.")
     @Column(nullable = false, unique = true)
     private String OriginLat;
 
-    @NotNull(message = "Date of birth is mandatory.")
+    @NotNull(message = "OriginLong is mandatory.")
     @Column(nullable = false)
     private String OriginLong;
 
-    @NotBlank(message = "First name is mandatory.")
+    @NotBlank(message = "Destination is mandatory.")
     @Column(nullable = false)
     @Size(max = 15, min = 3)
     private String Destination;
 
-    @NotBlank(message = "Middle name is mandatory.")
+    @NotBlank(message = "DestinationLat is mandatory.")
     @Column(nullable = false)
     @Size(max = 15)
     private String DestinationLat;
 
-    @NotBlank(message = "Last name is mandatory.")
+    @NotBlank(message = "DestinationLong is mandatory.")
     @Column(nullable = false)
     @Size(max = 15)
     private String DestinationLong;
 
-    @NotBlank(message = "Email is mandatory.")
+    @NotBlank(message = "Departure Time is mandatory.")
     @Column(nullable = false, unique = true)
     private String DepartureTime;
 
-    @NotBlank(message = "Phone number is mandatory.")
+    @NotBlank(message = "Arrival Time is mandatory.")
     @Column(nullable = false, unique = true)
     private String ArrivalTime;
 
-    @NotNull(message = "Date of birth is mandatory.")
+    @NotNull(message = "Duration is mandatory.")
     @Column(nullable = false)
     private String Duration;
 
-    @NotBlank(message = "Phone number is mandatory.")
+    @NotBlank(message = "Seat Class is mandatory.")
     @Column(nullable = false, unique = true)
     private String SClass;
 
-    @NotNull(message = "Date of birth is mandatory.")
+    @NotNull(message = "Status is mandatory.")
     @Column(nullable = false)
     private String Status;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Available Seats is mandatory.")
     @Column(nullable = false)
     private Integer AvaSeats;
 
-    @NotNull(message = "Pin is mandatory.")
+    @NotNull(message = "Number of Seats is mandatory.")
     @Column(nullable = false)
     private Integer NumSeat;
 

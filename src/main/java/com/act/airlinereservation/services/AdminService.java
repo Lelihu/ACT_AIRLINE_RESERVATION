@@ -19,7 +19,7 @@ public class AdminService {
 
     }
 
-    public Iterable<Admin> allAdmin() {
+    public Iterable<Admin> allAdmins() {
         return adminRepository.findAll();
     }
 }

@@ -19,7 +19,7 @@ public class ReservationService {
 
     }
 
-    public Iterable<Reservation> allReservation() {
+    public Iterable<Reservation> allReservations() {
         return reservationRepository.findAll();
     }
 }
