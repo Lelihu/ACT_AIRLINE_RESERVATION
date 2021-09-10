@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -16,23 +14,23 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Reservation {
 
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
-    @NotNull(message = "Schedule Id is Mandatory.")
+    @NotNull(message = "Schedule Id is Required.")
     @Column(nullable = false)
-    private Integer ScheduleId;
+    public Integer ScheduleId;
 
-    @NotNull(message = "Customer Id is Mandatory.")
+    @NotNull(message = "Customer Id is Required.")
     @Column(nullable = false)
-    private Integer CustomerId;
+    public Integer CustomerId;
 
-    @NotNull(message = "Seat No is Mandatory.")
+    @NotNull(message = "Seat No is Required.")
     @Column(nullable = false)
-    private Integer SeatNo;
+    public Integer SeatNo;
 
-    private Boolean isVerified = Boolean.TRUE;
+    public Boolean isVerified = Boolean.TRUE;
 }

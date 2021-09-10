@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data
@@ -18,43 +15,38 @@ import java.util.Date;
 @Builder
 
     public class Passenger {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
-    @NotBlank(message = "First name is mandatory.")
-    @Column(nullable = false)
-    @Size(max = 15, min = 3)
-    private String firstName;
-
-    @NotBlank(message = "Middle name is mandatory.")
+    @NotBlank(message = "First Name is Required.")
     @Column(nullable = false)
     @Size(max = 15)
-    private String Adress;
+    public String firstName;
+
+    @NotBlank(message = "Middle Name is Required.")
+    @Column(nullable = false)
+    @Size(max = 15)
+    public String address;
 
     @NotBlank(message = "Last name is mandatory.")
     @Column(nullable = false)
     @Size(max = 15)
-    private String lastName;
+    public String lastName;
 
-    @NotBlank(message = "Email is mandatory.")
+    @NotBlank(message = "Email is Required.")
     @Column(nullable = false, unique = true)
-    private String email;
+    public String email;
 
-    @NotBlank(message = "Phone number is mandatory.")
+    @NotBlank(message = "Phone Number is Required.")
     @Column(nullable = false, unique = true)
-    private String phoneNumber;
+    public String phoneNumber;
 
-    @NotNull(message = "Date of birth is mandatory.")
-    @Column(nullable = false)
-    private LocalDate dateOfBirth;
+    @NotBlank(message = "Password is Required.")
+    @Column(nullable = false, unique = true)
+    public String password;
 
-    @NotNull(message = "Password is mandatory.")
-    @Column(nullable = false)
-    private Integer Password;
-
-    private Boolean isVerified = Boolean.TRUE;
-
-    private Integer CreditCardNo = 0;
+    @NotBlank(message = "Credit Card No is Required.")
+    @Column(nullable = false, unique = true)
+    public String CreditCardNo;
 }

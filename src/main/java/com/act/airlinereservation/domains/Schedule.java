@@ -8,93 +8,83 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Schedule {
 
+public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
-    @NotBlank(message = "Airline is mandatory.")
+    @NotBlank(message = "Airline Name is Required.")
     @Column(nullable = false)
-    @Size(max = 15, min = 3)
-    private String Airline;
+    public String Airline;
 
-    @NotBlank(message = "Flight Name is mandatory.")
+    @NotBlank(message = "Flight Name is Required.")
     @Column(nullable = false)
-    @Size(max = 15)
-    private String FlightName;
+    public String FlightName;
 
-    @NotBlank(message = "Flight Number is mandatory.")
+    @NotBlank(message = "Flight Number is Required.")
     @Column(nullable = false)
-    @Size(max = 15)
-    private String FlightNum;
+    public String FlightNum;
 
-    @NotBlank(message = "Origin is mandatory.")
-    @Column(nullable = false, unique = true)
-    private String Origin;
-
-    @NotBlank(message = "OriginLat is mandatory.")
-    @Column(nullable = false, unique = true)
-    private String OriginLat;
-
-    @NotNull(message = "OriginLong is mandatory.")
+    @NotBlank(message = "Origin is Required.")
     @Column(nullable = false)
-    private String OriginLong;
+    public String Origin;
 
-    @NotBlank(message = "Destination is mandatory.")
+    @NotBlank(message = "Origin Latitude is Required.")
     @Column(nullable = false)
-    @Size(max = 15, min = 3)
-    private String Destination;
+    public String OriginLat;
 
-    @NotBlank(message = "DestinationLat is mandatory.")
+    @NotNull(message = "Origin Longitude is Required.")
     @Column(nullable = false)
-    @Size(max = 15)
-    private String DestinationLat;
+    public String OriginLong;
 
-    @NotBlank(message = "DestinationLong is mandatory.")
+    @NotBlank(message = "Destination is Required.")
     @Column(nullable = false)
-    @Size(max = 15)
-    private String DestinationLong;
+    public String Destination;
 
-    @NotBlank(message = "Departure Time is mandatory.")
-    @Column(nullable = false, unique = true)
-    private String DepartureTime;
-
-    @NotBlank(message = "Arrival Time is mandatory.")
-    @Column(nullable = false, unique = true)
-    private String ArrivalTime;
-
-    @NotNull(message = "Duration is mandatory.")
+    @NotBlank(message = "Destination Latitude is Required.")
     @Column(nullable = false)
-    private String Duration;
+    public String DestinationLat;
 
-    @NotBlank(message = "Seat Class is mandatory.")
-    @Column(nullable = false, unique = true)
-    private String SClass;
-
-    @NotNull(message = "Status is mandatory.")
+    @NotBlank(message = "Destination Longitude is Required.")
     @Column(nullable = false)
-    private String Status;
+    public String DestinationLong;
 
-    @NotNull(message = "Available Seats is mandatory.")
+    @NotBlank(message = "Departure Time is Required.")
     @Column(nullable = false)
-    private Integer AvaSeats;
+    public String DepartureTime;
 
-    @NotNull(message = "Number of Seats is mandatory.")
+    @NotBlank(message = "Arrival Time is Required.")
     @Column(nullable = false)
-    private Integer NumSeat;
+    public String ArrivalTime;
 
-    private Boolean isVerified = Boolean.TRUE;
+    @NotBlank(message = "Duration is Required.")
+    @Column(nullable = false)
+    public String Duration;
 
-    private Double Price = 0.0;
+    @NotBlank(message = "Seat Class is Required.")
+    @Column(nullable = false)
+    public String SeatClass;
+
+    @NotBlank(message = "Status is Required.")
+    @Column(nullable = false)
+    public String Status;
+
+    @NotNull(message = "Available Seats is Required.")
+    @Column(nullable = false)
+    public Integer AvailableSeats;
+
+    @NotNull(message = "Number of Seats is Required.")
+    @Column(nullable = false)
+    public Integer NumofSeats;
+
+    public Double Price = 0.0;
 }
 
 
