@@ -1,3 +1,0 @@
-https://ACT_AIRLINE_RESERVATION.herokuapp.com/api/schedule/list
-
-Lelihu/ACT_AIRLINE_RESERVATION
