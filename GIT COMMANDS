@@ -7,6 +7,6 @@ $ git config --global user.email "lelihum@yahoo.com"
 $ git config --global user.name "Lelihu"
 $ git status
 $ git commit -m "An airlines reservation system created using Java and springBoot framework"
-$ git remote add origin git@github.com:Lelihu/ACT_AIRLINE_RESERVATION.git
+$ git remote add origin git@github.com:Lelihu/act-airline-reservation.git
 $ git push -u origin main
 $ git log

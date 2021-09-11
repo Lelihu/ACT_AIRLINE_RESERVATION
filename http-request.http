@@ -3,11 +3,11 @@ POST http://localhost:8080/api/admin/create
 Content-Type: application/json
 
 {
-  "firstName": "Abebe5427",
-  "lastName": "Kebede5427",
-  "email": "abebe547@gmail.com",
-  "phoneNumber": "091111117421",
-  "password": "09111111177421"
+  "firstName": "Abebee5427",
+  "lastName": "Kebeede5427",
+  "email": "abeebe547@gmail.com",
+  "phoneNumber": "091122117421",
+  "password": "09111155177421"
 }
 
 ###
@@ -94,9 +94,9 @@ POST http://localhost:8080/api/schedule/create
 Content-Type: application/json
 
 {
-  "Airline": "Ethiopian",
-  "FlightName": "LFAB",
-  "FlightNum": "LFAB100",
+  "Airline": "Ethiopian2",
+  "FlightName": "LFAB2",
+  "FlightNum": "LFAB1002",
   "Origin": "Addis Ababa",
   "OriginLat": "33",
   "OriginLong": "44",
