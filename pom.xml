@@ -11,7 +11,7 @@
     <groupId>com.act</groupId>
     <artifactId>airline-reservation</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>airline-reservation</name>
+    <name>act-airline-reservation</name>
     <description>ACT AIRLINE RESERVATION SYSTEM</description>
     <properties>
         <java.version>11</java.version>
