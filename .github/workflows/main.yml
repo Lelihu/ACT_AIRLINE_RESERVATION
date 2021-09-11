@@ -28,4 +28,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "act-airline-reservation"
           heroku_email: "lelihum@yahoo.com"
-          healthcheck: "https://act-airline-reservation.herokuapp.com/actuator/health"
+
