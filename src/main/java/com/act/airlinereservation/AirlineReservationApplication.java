@@ -11,8 +11,6 @@ public class AirlineReservationApplication {
         SpringApplication.run(AirlineReservationApplication.class, args);
     }
 
-}
-
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -23,3 +21,4 @@ public class AirlineReservationApplication {
 			}
 		};
 	}
+}
